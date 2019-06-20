@@ -1,0 +1,194 @@
+[1mdiff --git a/README.md b/README.md[m
+[1mdeleted file mode 100644[m
+[1mindex 25c0d46..0000000[m
+[1m--- a/README.md[m
+[1m+++ /dev/null[m
+[36m@@ -1,2 +0,0 @@[m
+[31m-# AID1904 GIT 学习[m
+[31m-print (dsa) [m
+\ No newline at end of file[m
+[1mdiff --git a/a.out b/a.out[m
+[1mdeleted file mode 100644[m
+[1mindex e69de29..0000000[m
+[1mdiff --git a/core.txt b/core.txt[m
+[1mdeleted file mode 100644[m
+[1mindex 59acef5..0000000[m
+[1m--- a/core.txt[m
+[1m+++ /dev/null[m
+[36m@@ -1,4 +0,0 @@[m
+[31m-黄河治水天三来[m
+[31m-大赛的[m
+[31m-大树阿达阿文打[m
+[31m-君不见黄设置水太牛山个[m
+[1mdiff --git a/static/img.jpg b/static/img.jpg[m
+[1mdeleted file mode 100755[m
+[1mindex 03cbbea..0000000[m
+Binary files a/static/img.jpg and /dev/null differ
+[1mdiff --git a/stu.sql b/stu.sql[m
+[1mdeleted file mode 100644[m
+[1mindex d02a067..0000000[m
+[1m--- a/stu.sql[m
+[1m+++ /dev/null[m
+[36m@@ -1,154 +0,0 @@[m
+[31m--- MySQL dump 10.13  Distrib 5.7.19, for Linux (x86_64)[m
+[31m---[m
+[31m--- Host: localhost    Database: stu[m
+[31m--- ------------------------------------------------------[m
+[31m--- Server version	5.7.19-0ubuntu0.16.04.1[m
+[31m-[m
+[31m-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;[m
+[31m-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;[m
+[31m-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;[m
+[31m-/*!40101 SET NAMES utf8 */;[m
+[31m-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;[m
+[31m-/*!40103 SET TIME_ZONE='+00:00' */;[m
+[31m-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;[m
+[31m-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;[m
+[31m-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;[m
+[31m-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;[m
+[31m-[m
+[31m---[m
+[31m--- Table structure for table `Books`[m
+[31m---[m
+[31m-[m
+[31m-DROP TABLE IF EXISTS `Books`;[m
+[31m-/*!40101 SET @saved_cs_client     = @@character_set_client */;[m
+[31m-/*!40101 SET character_set_client = utf8 */;[m
+[31m-CREATE TABLE `Books` ([m
+[31m-  `id` int(11) NOT NULL AUTO_INCREMENT,[m
+[31m-  `name` varchar(32) DEFAULT NULL,[m
+[31m-  `author` varchar(32) DEFAULT NULL,[m
+[31m-  `publication_data` date DEFAULT NULL,[m
+[31m-  PRIMARY KEY (`id`)[m
+[31m-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;[m
+[31m-/*!40101 SET character_set_client = @saved_cs_client */;[m
+[31m-[m
+[31m---[m
+[31m--- Dumping data for table `Books`[m
+[31m---[m
+[31m-[m
+[31m-LOCK TABLES `Books` WRITE;[m
+[31m-/*!40000 ALTER TABLE `Books` DISABLE KEYS */;[m
+[31m-INSERT INTO `Books` VALUES (1,'骆驼祥子','  舍','1993-05-06'),(2,'围城','钱钟书','1996-07-14'),(3,'呐喊','鲁迅','1989-10-14');[m
+[31m-/*!40000 ALTER TABLE `Books` ENABLE KEYS */;[m
+[31m-UNLOCK TABLES;[m
+[31m-[m
+[31m---[m
+[31m--- Table structure for table `buy`[m
+[31m---[m
+[31m-[m
+[31m-DROP TABLE IF EXISTS `buy`;[m
+[31m-/*!40101 SET @saved_cs_client     = @@character_set_client */;[m
+[31m-/*!40101 SET character_set_client = utf8 */;[m
+[31m-CREATE TABLE `buy` ([m
+[31m-  `id` int(11) DEFAULT NULL,[m
+[31m-  `name` varchar(32) DEFAULT NULL,[m
+[31m-  `time` datetime DEFAULT CURRENT_TIMESTAMP[m
+[31m-) ENGINE=InnoDB DEFAULT CHARSET=utf8;[m
+[31m-/*!40101 SET character_set_client = @saved_cs_client */;[m
+[31m-[m
+[31m---[m
+[31m--- Dumping data for table `buy`[m
+[31m---[m
+[31m-[m
+[31m-LOCK TABLES `buy` WRITE;[m
+[31m-/*!40000 ALTER TABLE `buy` DISABLE KEYS */;[m
+[31m-INSERT INTO `buy` VALUES (1,'骆驼祥子','2019-06-17 11:34:54');[m
+[31m-/*!40000 ALTER TABLE `buy` ENABLE KEYS */;[m
+[31m-UNLOCK TABLES;[m
+[31m-[m
+[31m---[m
+[31m--- Table structure for table `class_1`[m
+[31m---[m
+[31m-[m
+[31m-DROP TABLE IF EXISTS `class_1`;[m
+[31m-/*!40101 SET @saved_cs_client     = @@character_set_client */;[m
+[31m-/*!40101 SET character_set_client = utf8 */;[m
+[31m-CREATE TABLE `class_1` ([m
+[31m-  `id` int(11) NOT NULL AUTO_INCREMENT,[m
+[31m-  `name` varchar(32) NOT NULL,[m
+[31m-  `age` int(11) NOT NULL,[m
+[31m-  `sex` enum('w','m') DEFAULT NULL,[m
+[31m-  `score` float DEFAULT '0',[m
+[31m-  PRIMARY KEY (`id`)[m
+[31m-) ENGINE=InnoDB DEFAULT CHARSET=utf8;[m
+[31m-/*!40101 SET character_set_client = @saved_cs_client */;[m
+[31m-[m
+[31m---[m
+[31m--- Dumping data for table `class_1`[m
+[31m---[m
+[31m-[m
+[31m-LOCK TABLES `class_1` WRITE;[m
+[31m-/*!40000 ALTER TABLE `class_1` DISABLE KEYS */;[m
+[31m-/*!40000 ALTER TABLE `class_1` ENABLE KEYS */;[m
+[31m-UNLOCK TABLES;[m
+[31m-[m
+[31m---[m
+[31m--- Table structure for table `interest`[m
+[31m---[m
+[31m-[m
+[31m-DROP TABLE IF EXISTS `interest`;[m
+[31m-/*!40101 SET @saved_cs_client     = @@character_set_client */;[m
+[31m-/*!40101 SET character_set_client = utf8 */;[m
+[31m-CREATE TABLE `interest` ([m
+[31m-  `id` int(11) NOT NULL AUTO_INCREMENT,[m
+[31m-  `name` varchar(32) NOT NULL,[m
+[31m-  `hobby` set('sing','dance','draw') DEFAULT NULL,[m
+[31m-  `course` char(1) NOT NULL,[m
+[31m-  `price` decimal(6,2) DEFAULT NULL,[m
+[31m-  `comment` text,[m
+[31m-  PRIMARY KEY (`id`)[m
+[31m-) ENGINE=InnoDB DEFAULT CHARSET=utf8;[m
+[31m-/*!40101 SET character_set_client = @saved_cs_client */;[m
+[31m-[m
+[31m---[m
+[31m--- Dumping data for table `interest`[m
+[31m---[m
+[31m-[m
+[31m-LOCK TABLES `interest` WRITE;[m
+[31m-/*!40000 ALTER TABLE `interest` DISABLE KEYS */;[m
+[31m-/*!40000 ALTER TABLE `interest` ENABLE KEYS */;[m
+[31m-UNLOCK TABLES;[m
+[31m-[m
+[31m---[m
+[31m--- Table structure for table `marathon`[m
+[31m---[m
+[31m-[m
+[31m-DROP TABLE IF EXISTS `marathon`;[m
+[31m-/*!40101 SET @saved_cs_client     = @@character_set_client */;[m
+[31m-/*!40101 SET character_set_client = utf8 */;[m
+[31m-CREATE TABLE `marathon` ([m
+[31m-  `编号` int(11) DEFAULT NULL,[m
+[31m-  `姓名` varchar(32) DEFAULT NULL,[m
+[31m-  `报名时间` datetime DEFAULT NULL,[m
+[31m-  `成绩` time DEFAULT NULL[m
+[31m-) ENGINE=InnoDB DEFAULT CHARSET=utf8;[m
+[31m-/*!40101 SET character_set_client = @saved_cs_client */;[m
+[31m-[m
+[31m---[m
+[31m--- Dumping data for table `marathon`[m
+[31m---[m
+[31m-[m
+[31m-LOCK TABLES `marathon` WRITE;[m
+[31m-/*!40000 ALTER TABLE `marathon` DISABLE KEYS */;[m
+[31m-/*!40000 ALTER TABLE `marathon` ENABLE KEYS */;[m
+[31m-UNLOCK TABLES;[m
+[31m-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;[m
+[31m-[m
+[31m-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;[m
+[31m-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;[m
+[31m-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;[m
+[31m-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;[m
+[31m-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;[m
+[31m-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;[m
+[31m-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;[m
+[31m-[m
+[31m--- Dump completed on 2019-06-17 14:23:24[m
+[1mdiff --git a/test.py b/test.py[m
+[1mdeleted file mode 100644[m
+[1mindex 7c3d885..0000000[m
+[1m--- a/test.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,2 +0,0 @@[m
+[31m-print("b")[m
+[31m-print（"召唤神龙"）[m
